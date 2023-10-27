@@ -10,7 +10,7 @@ export default function Slider({ className }) {
     const userName = user.given_name;
     const [data, setData] = useState([]);
     const [cerdit, setCerdit] = useState([]);
-    const [showSidebar, setShowSidebar] = useState(false);
+    // const [showSidebar, setShowSidebar] = useState(false);
 
     const fetchData = async () => {
         try {
