@@ -71,7 +71,8 @@ export default function Slider({ className }) {
   };
   useEffect(() => {
     fetchData();
-  }, [fetchData]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   useEffect(() => {
     userData();
