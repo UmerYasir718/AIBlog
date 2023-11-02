@@ -7,7 +7,7 @@ import { FaCoins } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import "../App.css";
 export default function Slider({ className }) {
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState();
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   let navigate = useNavigate();
@@ -117,7 +117,15 @@ export default function Slider({ className }) {
       console.log(result.error);
     }
   };
-
+  useEffect(() => {
+    console.log(window.innerWidth);
+    if (window.innerWidth >= 1600) {
+      setShow(true);
+    }
+    if (window.innerWidth <= 500) {
+      setShow(false);
+    }
+  }, []);
   return (
     <>
       <Button variant="primary" onClick={handleShow} className="lauchBtn">
