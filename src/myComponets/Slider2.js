@@ -3,6 +3,7 @@ import { loadStripe } from "@stripe/stripe-js/pure";
 import React, { useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Offcanvas from "react-bootstrap/Offcanvas";
+import { FaCoins } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import "../App.css";
 export default function Slider({ className }) {
@@ -116,6 +117,7 @@ export default function Slider({ className }) {
       console.log(result.error);
     }
   };
+
   return (
     <>
       <Button variant="primary" onClick={handleShow} className="lauchBtn">
@@ -148,8 +150,10 @@ export default function Slider({ className }) {
           </Link>
           <hr className="text-light" />
           <button className="newchatbtn mb-2" onClick={checkOutBtn}>
-            {cerdit ? cerdit.token : 0}{" "}
-            <i class="fa-solid fa-coins" style={{ color: "#e6d40a" }}></i>
+            {cerdit ? cerdit.token : 0}
+            <FaCoins style={{ color: "#e6d40a" }} />
+            &nbsp;
+            {/* <i class="fa-solid fa-coins" style={{ color: "#e6d40a" }}></i> */}
           </button>
           <ul className="nav flex-column postTitle">
             {data.map((item) => (
