@@ -3,7 +3,7 @@ import { loadStripe } from "@stripe/stripe-js/pure";
 import React, { useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Offcanvas from "react-bootstrap/Offcanvas";
-import { FaCoins } from "react-icons/fa";
+import { FaBars, FaCoins } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import "../App.css";
 export default function Slider({ className }) {
@@ -129,7 +129,7 @@ export default function Slider({ className }) {
   return (
     <>
       <Button variant="primary" onClick={handleShow} className="lauchBtn">
-        <i class="fas fa-bars" id="cancel"></i>
+        <FaBars id="cancel" />
       </Button>
 
       <Offcanvas

@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import "../App.css";
-import Slider2 from "./Slider2";
 export default function Form() {
   let navigate = useNavigate();
   const { user } = useAuth0();
@@ -36,25 +35,6 @@ export default function Form() {
     userDataDb(); // Fetch Cerdit when the component mounts (page load)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  // const GetData = async () => {
-  //     // setTopic(event.target.value);
-  //     // setKeyWords(event.target.value);
-  //     console.log(topic, keyWords);
-  //     fetch("http://localhost:8000/post", {
-  //         method: "POST",
-  //         body: JSON.stringify({ topic, keyWords })
-  //     })
-  //         .then(res => res.json())
-  //         .then(json => {
-  //             console.log(json);
-  //             navigate("/post", {
-  //                 state: {
-  //                     post: json
-  //                 }
-  //             });
-  //         }
-  //         )
-  // };
   const GetData = async () => {
     console.log(topic, keyWords);
     let toasterId = toast.loading("Your post is being generated...");
@@ -106,7 +86,7 @@ export default function Form() {
 
   return (
     <div className="CompletePage">
-      <Slider2 />
+      {/* <Slider2 /> */}
       <section className="form container-fluid my-4 ">
         <div className="mb-3">
           <label for="Topic" className="form-label">
