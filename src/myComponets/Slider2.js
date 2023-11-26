@@ -118,7 +118,7 @@ export default function Slider({ className }) {
     }
   };
   useEffect(() => {
-    console.log(window.innerWidth);
+    // console.log(window.innerWidth);
     if (window.innerWidth >= 1600) {
       setShow(true);
     }
