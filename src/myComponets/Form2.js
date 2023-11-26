@@ -36,6 +36,7 @@ export default function Form2() {
 
     useEffect(() => {
         userDataDb(); // Fetch Cerdit when the component mounts (page load)
+         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const GetData = async () => {
