@@ -91,12 +91,12 @@
   width: 100%;
 }
 
-/* .form {
+.form {
   padding: 10px;
   margin-left: 22vw;
   margin-top: auto;
   justify-content: end;
-} */
+}
 
 .LoginPg {
   background-image: url(./myComponets/LoginImg.jpg);

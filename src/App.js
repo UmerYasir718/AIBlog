@@ -1,5 +1,5 @@
 import { useAuth0 } from "@auth0/auth0-react";
-import { BrowserRouter, Form, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import logo from "./logo.svg";
 import Canel from "./myComponets/Canel";
@@ -7,7 +7,8 @@ import DataLoader from "./myComponets/DataLoader";
 import Login from "./myComponets/Login";
 import Result from "./myComponets/Result";
 import Success from "./myComponets/Success";
-// import Form2 from './myComponets/Form2';
+// import Form from "./myComponets/Form";
+import Form2 from './myComponets/Form2';
 // import Slider2 from './myComponets/Slider2';
 // import Auth from './myComponets/Auth';
 function App() {
@@ -27,7 +28,7 @@ function App() {
       {isAuthenticated ? (
         <BrowserRouter>
           <Routes>
-            <Route exact path="/" element={<Form />} />
+            <Route exact path="/" element={<Form2 />} />
             <Route exact path="/post" element={<Result />} />
             <Route exact path="/postdata" element={<DataLoader />} />
             <Route exact path="/sucess" element={<Success />} />
